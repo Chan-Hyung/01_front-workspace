@@ -27,8 +27,8 @@
             justify-content: flex-start; /* 기본값 */
             justify-content: flex-end; /* 끝 정렬 */
             justify-content: space-between; /* 양쪽 정렬*/
-            justify-content: space-evenly; /* 공백을 일정하게 정렬 */
-            justify-content: space-around; /* 요소의 양 옆공백을 잡고 정렬 */
+            justify-content: space-evenly; /* 공백기준으로 일정하게 정렬 */
+            justify-content: space-around; /* 요소의 양 끝옆 공백을 기준으로 잡고 정렬 */
             justify-content: center; /* 가운데 정렬 */
         }
 
@@ -49,7 +49,7 @@
         }
 
         .flex-wrap-test {
-            flex-wrap: wrap; /* 기본값 -> nowrap */
+            flex-wrap: wrap-reverse; /* 기본값 -> nowrap */
         }
 
     </style>
@@ -71,11 +71,18 @@
         <div>FLEX</div>
     </div>
 
-    <h3>justify-content : 요소들을 "가로" 선상에서 정렬하도록 도와주는 속성</h3>
+    <h3>
+        justify-content : 요소들을 "가로" 선상에서 정렬하도록 도와주는 속성 <br>
+        align-content : 요소들을 "세로" 선상에서 정렬하도록 도와주는 속성(단, justify-content와 다르게 한 줄 때면 적용X)
+    </h3>
 
     <pre>
         선택자 {
             justify-content : flex-start | flex-end | center | space-between | space-evenly | space-around
+        }
+        
+        선택자 {
+            align-content : flex-start | flex-end | center | space-between | space-evenly | space-around
         }
     </pre>
 
@@ -90,6 +97,8 @@
         선택자 {
             flex-direction : row | row-reverse | column | column-reverse;
         }
+
+        + 만약에 flex-direction의 값이 column 혹은 column-reverse가 되면 justify-content의 기준이 세로, align-items의 기준이 가로 바뀜
     </pre>
 
     <div id="container" class="flex-direction-test">
@@ -97,7 +106,9 @@
         <div>FLEX2</div>
     </div>
 
-    <h3>align-items : 요소들을 "세로" 선상에서 정렬하는 속성</h3>
+    <h3>align-items : 요소들을 "세로" 선상에서 정렬하는 속성
+        <br>+ align-self : align-items과 명령어는 똑같이 쓰이지만 각각의 요소들을 따로 지정 가능
+    </h3>
     <pre>
         선택자 {
             align-items : flex-start | flex-end | center | baseline | stretch
@@ -125,7 +136,7 @@
         <div>FLEX6</div>
     </div>
 
-    <h3> flex-wrap : 요소들을 한 줄로 정렬할지 여러 줄로 정렬할지 정하는 속성</h3> <!-- 화면에 맞게 나눠줌 -->
+    <h3> flex-wrap : 요소들을 한 줄로 정렬할지 여러 줄로 정렬할지 정하는 속성(+wrpa-reverse)</h3> <!-- 화면에 맞게 나눠줌 -->
 
     <div id="container" class="flex-wrap-test">
         <div>FLEX1</div>
@@ -140,6 +151,11 @@
         <div>FLEX10</div>
     </div>
 
-
+    <b>+ flex-direction과 flex-wrap의 단축 속성은 flex-flow</b>
+    <pre>
+        선택자 {
+            flex-flow: row wrap;
+        }
+    </pre>
 </body>
 </html>
