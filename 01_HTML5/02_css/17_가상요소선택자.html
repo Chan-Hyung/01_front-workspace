@@ -16,7 +16,7 @@
             content: "앞!!";
         }
 
-        .after-box::after{
+        .after-box::after{ /* 가상요소는 인라인으로 만들어지기 때문에, 크기를 지정하기 위해서는 블럭요소여야함 */
             content: "";
             display: block;
             width: 30px;
