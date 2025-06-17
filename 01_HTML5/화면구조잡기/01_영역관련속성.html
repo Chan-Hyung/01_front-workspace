@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 속성</title>
+
+    <style>
+        .test{
+            /*  border 영역 */
+            border: 20px solid blue;
+
+            /* content 영역 */
+            width: 300px;
+            height: 150px; /* width와 height는 기본적으로는 content 영역만*/
+
+            /* padding 영역 */
+            padding: 10px;
+
+            /* 요소의 전체 가로 길이는? 360 */
+            /* 요소의 전체 세로 길이는? 210 */
+
+            /* box-sizing: 지정한 width, height를 어느 영역 범위까지 설정 가능 */
+            box-sizing: content-box; /* 기본값 */
+            box-sizing: border-box; /* border영역까지*/
+
+        }
+
+        .wrap{
+            border: 5px solid red;
+            width: 400px;
+            height: 200px; /* content 크기 */
+        }
+
+        .test1, .test2{ /* 공통속성 : 가로길이를 부모와 같게 */
+            border: 5px solid blue;
+            width: 100%; /* 개인 border 길이 때문에 맞지 않음 */
+            box-sizing: border-box;
+        }
+
+        .test1{
+            height: 40%;
+        }
+
+        .test2{
+            height: 60%;
+        }
+
+        .test3, .test4{
+            border: 5px solid blue;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .test3{
+            width: 30%;
+        }
+
+        .test4{
+            width: 70%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1> 영역 관련 속성 </h1>
+
+    <div class="test">
+        1) content 영역 : 요소 내의 내용물 영역 <br>
+        2) border 영역 : 요소 내의 테두리 영역 <br>
+        3) padding 영역 : content와 border 사이의 영역(여백) <br>
+        4) margin 영역 : 요소의 바깥쪽 영역
+    </div>
+
+    <h2> div 안에 또 다른 여러 개의 div 넣는 연습 </h2>
+
+    <h3> 상하 2등분 하기 </h3>
+
+    <div class="wrap">
+        <div class="test1"></div>
+        <div class="test2"></div>
+    </div>
+
+    <h3> 좌우 2등분 하기 </h3>
+
+    <div class="wrap">
+        <div class="test3"></div>
+        <div class="test4"></div>
+    </div>
+
+
+
+</body>
+</html>
