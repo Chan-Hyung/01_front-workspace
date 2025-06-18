@@ -6,11 +6,97 @@
     <title>실습2</title>
 
     <style>
+        div, form input{
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
 
         .wrap{
             width: 1000px;
             height: 900px;
-            box-sizing: border-box;
+            margin: auto;
+        }
+
+        .wrap>div{
+            width: 100%;
+        }
+
+        .head{
+            height: 20%;
+        }
+
+        .head>div{
+            height: 100%;
+            float: left;
+        }
+
+        #h1, #h3{
+            width: 20%;
+        }
+
+        #h2{
+            width: 60%;
+            position: relative;            
+        }
+
+        #hsearch{
+            width: 80%;
+            height: 20%;
+            margin: auto;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        
+        #hsearch>div{
+            height: 100%;
+            float: left;            
+        }
+        
+        #hsch{
+            width: 80%;
+        }
+
+        #hbtn{
+            width: 20%;
+        }
+        
+        #hsearch input{
+            width: 100%;
+            height: 100%;
+        }
+
+        #hsearch button{
+            width: 100%;
+            height: 100%;
+        }
+
+        #im1{
+            width: 195px;
+            height: 175px;
+        }
+        
+        
+        #im2{
+            width: 35px;
+            height: 25px;
+        }
+
+        /* 여기서부터 */
+
+        .navigator{
+            height: 5%;
+        }
+
+        .content{
+            height: 45%;
+        }
+
+        .footer{
+            height: 30%;
         }
 
     </style>
@@ -19,23 +105,40 @@
 <body>
     <div class="wrap">
         
-        <div class="top">
-            <div id="t1"></div>
-            <div id="t2"></div>
-            <div id="t3"></div>
+        <div class="head">
+            
+            <div id="h1">
+                <img src="image2/logo.PNG" id="im1">
+            </div>
+            
+            <div id="h2">
+                <form action="" id="hsearch">
+                    <div id="hsch">
+                        <input type="text" id="keyword">
+                    </div>
+
+                    <div id="hbtn">                   
+                        <button type="button" id="sbtn">
+                            <img src="image2/search.png" id="im2">
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="h3"></div>
         </div>
         
         <div class="navigator"></div>
 
-        <div class="mid">
-            <div id="m1">
-                <div id="m_1"></div>
-                <div id="m_2"></div>
-                <div id="m_3"></div>
+        <div class="content">
+            <div id="c1">
+                <div id="c_1"></div>
+                <div id="c_2"></div>
+                <div id="c_3"></div>
             </div>
-            <div id="m2">
-                <div id="m_2"></div>
-                <div id="m_2"></div>
+            <div id="c2">
+                <div id="c_2"></div>
+                <div id="c_2"></div>
             </div>
         </div>
 
