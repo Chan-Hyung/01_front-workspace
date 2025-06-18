@@ -224,4 +224,15 @@ body{
     width: 100%;
 }
 
+.container .logo1{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.container .logo1 img{
+    width: 100%;
+}
+
 
