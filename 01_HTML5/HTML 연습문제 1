@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		 <h1>자바(Java) 학습내용</h1>
+
+        <h3> 학생 : 박찬형</h3>
+
+        <h6> 이메일 : homework201@naver.com</h6>
+        <hr>
+		<ul>
+			<li> 프로그래밍 언어</li>
+				<ul>
+					<li><s>java</s></li>
+				</ul>
+       </ul>
+	   <ul>
+			<li>데이터 베이스</li>
+				<ul>
+					<li><s>Oracle</s></li>
+				</ul>
+	   </ul> 
+	   <ul>
+			<li>화면 구현</li>
+				<ol>
+					<li><mark>HTML5</mark></li>
+					<li>CSS3</li>
+					<li>JavaSrcrimpt</li>
+					<li>jQuery</li>
+				</ol>
+	   </ul>
+	   <ul>
+			<li>서버 개발 기술</li>
+				<ol type="i">
+					<li><s>JDBC</s></li>
+					<li>Servlet</li>
+					<li>JSP</li>
+					<li>AJAX</li>
+				</ol>
+	   </ul>
+	   <ul>
+			<li>프레임워크</li>
+				<ol start="3" type="a">
+					<li>Mybatis</li>
+					<li>spring</li>
+				</ol>
+	   </ul>
+
+	</body>
+</html>

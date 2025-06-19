@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <table border="1"></table>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form action="wer.com" method="post">
+        <fieldset>
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                ID : <input type="text" name="userID"><button type="button">중복 확인</button><br>
+                비밀번호 : <input type="password" name="userPwd"><br>
+                비밀번호 확인 : <input type="Password" name="Pwdcheck"> <br>
+                Email : <input type="email" name="email">
+                <select>
+                    <option>직접입력</option>
+                    <option>gmail.com</option>
+                    <option>naver.com</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>추가 정보</legend>
+                프로필사진 : <input type="file" id="file-input"><label for="file-input"></label></label><br><br><br>
+                성별 :
+                <input type="radio" name="gender" id="male">
+                <label for="male">남자</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">여자</label> <br>
+                <br>생년월일 : <input type="date" name="date"><br>
+                <br>취미 : <br>
+                <input type="checkbox" name="baseball" id="b">
+                <label for="b">야구</label>
+                <input type="checkbox" name="baketball" id="ba">
+                <label for="ba">농구</label>
+                <input type="checkbox" name="soccer" id="s">
+                <label for="s">축구</label> <br>
+                <input type="checkbox" name="study" id="st">
+                <label for="st">공부</label>
+                <input type="checkbox" name="music" id="m">
+                <label for="m">야구</label> <br>
+                <input type="checkbox" name="other" id="o">
+                <label for="o">기타</label>
+                <input type="text" name="text"><br>
+                <br>자기소개<br>
+                <textarea name="content" cols="35" rows="5"></textarea>
+            </fieldset>
+            <br>
+            <button type="button">sendmessage</button>
+        </fieldset>
+    </form>
+</body>

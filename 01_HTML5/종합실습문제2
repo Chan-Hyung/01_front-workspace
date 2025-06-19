@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="wer.com" method="post">
+            <fieldset>
+                <legend>납품자 정보보</legend>
+                1. 납품자명 : <input type="text" name="name" placeholder="name"><br>
+                2. email : <input type="text" name="email" placeholder="asdfqe@naver.com"><br>
+                3. 홈페이지 : <input type="text" name="homepage" placeholder="http//">
+            </fieldset>
+            <fieldset>
+                <legend>납품 정보보</legend>
+                <li> 상품명 : <input type="text" name="product"></li>
+                <li> 납품수량 : <input type="number" name="amount" placeholder="최소 100"></li>
+                <li> 남품등급 : <input type="range" name="score" min="0" max="10" step="1"></li>
+                <li> 기타사항 : <textarea name="content" cols="21"></textarea></li>
+            </fieldset>
+            <br>
+            <button type="button">sendmessage</button>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <table border="1">
+        <head>
+            <style>
+                thead {
+                    background-color: skyblue;
+                    color: black;
+                }
+ 
+                tbody {
+                    background-color: orangered;
+                    color: black;
+                }
+
+                tfoot {
+                    background-color: yellow;
+                    color: black; 
+                }
+                #er {
+                    background-color: orange;
+                }
+                #re {
+                    background-color: orangered;
+                }
+            </style>
+        </head>
+        <body>
+            <thead>
+                <tr>
+                    <th colspan="5">하수정 보석 컬렉션</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4">제품리스트</td>
+                    <td>코드</td>
+                    <td>분류</td>
+                    <td>가격</td>
+                    <td>구매가능 개수</td>
+                </tr>
+                <tr>
+                    <td id ="er">01-468</td>
+                    <td id ="er">가을</td>
+                    <td id ="er">200,000원</td>
+                    <td id ="er">1068</td>
+                </tr>
+                <tr>
+                    <td id ="er">01-469</td>
+                    <td id ="er">가을</td>
+                    <td id ="er">150,000원</td>
+                    <td id ="er">1700</td>
+                </tr>
+                <tr>
+                    <td id ="er">01-470</td>
+                    <td id ="er">여름</td>
+                    <td id ="er">950,000원</td>
+                    <td id ="er">2500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" id ="re">종합</td>
+                    <td>1,420,000원</td>
+                    <td>8468</td>
+                </tr>
+            </tfoot>
+        </body>
+</html>
