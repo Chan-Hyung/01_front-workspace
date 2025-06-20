@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+
+    <style>
+        /* 긴본 */
+        div, form{
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 1000px;
+            height: 900px;
+            margin: auto;
+        }
+
+        .wrap>div{
+            width: 100%;
+        }
+
+        .header, .footer{
+            height: 20%;
+        }
+
+        .navigator{
+            background-color: green;
+            height: 5%;
+        }
+
+        .content{
+            height: 55%;
+        }
+        
+        #im1{
+            width: 200px;
+            height: 150px;
+        }
+
+        #im2{
+            width: 600px;
+            height: 150px;
+        }
+
+        #im3{
+            width: 200px;
+            height: 480px;
+        }
+
+        #im4, #im5, #im6, #im7{
+            width: 275px;
+            height: 190px;
+        }
+
+        #im8{
+            width: 245px;
+            height: 218px;
+        }
+
+        #im9{
+            width: 245px;
+            height: 145px;
+        }
+
+        #im10{
+            width: 950px;
+            height: 175px;
+        }
+        
+
+        /* 헤드 */
+
+        .header>div{
+            height: 100%;
+            float: left;
+        }
+
+        #header_1{
+            width: 20%;
+            
+        }
+
+        #header_2{
+            width: 60%;
+        }
+
+        #header_3{
+           width: 20%;
+        }
+
+        /* navi */
+
+        #navi{
+            height: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #navi>li{
+            float: left;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+        }
+
+        #navi a{
+            color: white;
+            font-size: 30px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        #navi a:hover{
+            color: greenyellow;
+        }
+
+        
+
+        /* content */
+
+        .content>div{
+            height: 100%;
+            float: left;
+        }
+
+        #content_1{
+            width: 20%;
+        }
+
+        #content_2{
+            width: 55%;
+        }
+
+        #content_2>div{
+            width: 50%;
+            height: 50%;
+            float: left;
+        }
+
+        #content_2>div p{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 20px;          
+        }
+
+        #content_3{
+            width: 25%;
+        }
+
+        #content_3>div{
+            width: 100%;
+        }
+
+        #content__a{
+            height: 25%;
+        }
+
+        #content__a>div{
+            width: 100%;
+        }
+
+
+        #content__b{
+            height: 45%;
+        }
+
+        #content__c{
+            height: 30%;
+        }
+
+        #user {
+            height: 80%;
+        }
+
+        #found{
+            height: 20%;
+            text-align: center;
+        }
+
+        #userIP {
+            width: 60%;
+            height: 100%;
+            float: left
+        }
+
+        #login{
+            width: 40%;
+            height: 100%;
+            float: left
+        }
+
+        #userIP>input{
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+        #login>input{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        #found>a{
+            text-decoration: none;
+            color: rgb(58, 58, 58);
+            font-size: 12px;
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div id="header_1">
+                <img src="image/logo.jpg" id="im1">
+            </div>
+            <div id="header_2">
+                <img src="image/mainlogo.jpg" id="im2">
+            </div>
+            <div id="header_3"></div>
+        </div>
+
+        <div class="navigator">
+            <ul id="navi">
+                <li><a href="">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Board</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div id="content_1">
+                <img src="image/left_img.jpg" id="im3">
+            </div>
+            <div id="content_2">
+                <div id="content__1">
+                    <img src="image/main_img1.jpg" id="im4">
+                    <p>나무를 심는 사람들</p>
+                </div>
+                <div id="content__2">
+                    <img src="image/main_img2.jpg" id="im5">
+                    <p>아이들에게 녹색미래를</p>
+                </div>
+                <div id="content__3">
+                    <img src="image/main_img3.jpg" id="im6">
+                    <p>설악산을 살리는 길</p>
+                </div>
+                <div id="content__4">
+                    <img src="image/main_img4.jpg" id="im7">
+                    <p>사라지는 북극곰들</p>
+                </div>
+            </div>
+            <div id="content_3">
+                <div id="content__a">
+                    <div id="user">
+                        <div id="userIP">
+                            <input type="text" name="userID" placeholder="ID를 입력하세요">
+                            <input type="password" name="userPwd" placeholder="PW를 입력하세요">
+                        </div>
+
+                        <div id="login">
+                            <input type="submit" value="로그인">
+                        </div>
+                    </div>
+                    <div id="found">
+                        <a href="">회원가입</a>
+                        <a href="">ID/PW 찾기</a>
+                    </div>
+                </div>
+                <div id="content__b">
+                    <img src="image/right_img.jpg" id="im8">
+                </div>
+                <div id="content__c">
+                    <img src="image/me_chat.jpg" id="im9">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div id="footer">
+                <img src="image/footer.JPG" id="im10">
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    
+</body>
+</html>
