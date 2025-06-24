@@ -80,7 +80,7 @@
 
     <div id="area3" class="area"></div>
     <script>
-        function test2(value){ // 변수 : let, const, var | 매개변수 제시시 자료형지정x, 선언 구문x => 변수면망
+        function test2(value){ // 변수 : let, const, var | 매개변수 제시시 자료형지정x, 선언 구문x => 변수
             document.getElementById("area3").innerHTML = value
         }
     </script>
@@ -98,7 +98,10 @@
 
     <script>
         function test3() {
-            console.log(arguments[0]);
+            console.log("전달된 인수의 개수: " + arguments.length);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+            console.log(arguments[3]);
 
             const area4 = document.getElementById("area4");
 
@@ -138,7 +141,7 @@
     <script>
         function test5(result){
             // 버튼 배경색이 red
-            result.style.backgoround = "red"
+            result.style.background = "red"
             // 클릭 => 클릭됨
             result.innerHTML = "클릭됨"
 
