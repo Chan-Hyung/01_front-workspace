@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제9</title>
+    <style>
+        #output {
+            border: 1px solid red;
+            min-height: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="ans" />
+    <button onclick="add()">입력</button>
+    <br/><br/>
+    <div id="output"></div>
+    <button onclick="out()">출력</button>
+
+    <script>
+        const box = [];
+
+        function add() {
+            const con = document.getElementById('ans').value;
+            if(con !== '') {
+                box.push(con);
+                document.getElementById('ans').value = '';
+            }
+        }
+
+        function out() {
+            document.getElementById('output').textContent = box.join(',');
+        }
+    </script>
+</body>
+</html>
