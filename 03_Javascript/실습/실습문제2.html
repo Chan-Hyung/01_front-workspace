@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2</title>
+
+    <style>
+    #colorBox, #sizeBox {
+      background-color: black;
+      margin: 10px 0;
+    }
+
+    #colorBox {
+      width: 100px;
+      height: 100px;
+    }
+
+    #sizeBox {
+      width: 50px;
+      height: 50px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h2>1. 색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들어 보시오</h2>
+  <div id="colorBox"></div>
+  <input type="color" id="colorInput">
+  <button onclick="changeColor()">변경</button>
+
+  <h2>2. 버튼에 따라 크기 조절이 가능하게 만들기</h2>
+  <div id="sizeBox"></div>
+  <button onclick="resizeBox(50)">50x50</button>
+  <button onclick="resizeBox(100)">원본(100x100)</button>
+  <button onclick="resizeBox(200)">200x200</button>
+
+  <script>
+    function changeColor() {
+      var color = document.getElementById('colorInput').value;
+      document.getElementById('colorBox').style.backgroundColor = color;
+    }
+
+    function resizeBox(size) {
+      var box = document.getElementById('sizeBox');
+      box.style.width = size + 'px';
+      box.style.height = size + 'px';
+    }
+  </script>
+
+</body>
+</html>
