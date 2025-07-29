@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div{
+            background-color: beige;
+            border: 1px solid yellow;
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        p{
+            border: 1px solid lightgray;
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            margin-top: 0px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h3> slideDown()과 slideUp()</h3>
+
+    <div>Q. 반품 언제 되나요?</div>
+    <p>A. 지금 확인 중 입니다.</p>
+
+    <div>Q. 상품 위치를 알고싶습니다.</div>
+    <p>A. 배송조회해보시길 바랍니다.</p>
+    
+    <div>Q. 8XL 사이즈 있나요</div>
+    <p>A. 네</p>
+    
+    <div>Q. 배송비 있나요</div>
+    <p>A. 아니요</p>
+    
+    <div>Q. 상품손상으로 반품가능한가요</div>
+    <p>A. 네</p>
+
+    <script>
+        $(function(){
+            $("div").click(function(){
+                // $(this): 클릭이벤트가 발생한 해당 div
+                // 해당 div요소바로 아래 p만 보여야함
+                // $(this).next() : 클릭 이벤트가 발생한 div 요소 뒤에 있는 p요소
+                // 보여지는 상태면 사라지게, 안보이면 나타나게
+                const $p = $(this).next(); // jQuery 방식으로 선택된 요소를 담아둘 때 $를 붙임
+                /*
+                if($p.css("display") == "none"){
+                    // 스타일에서 none으로 안보여지게 했으니 보여지게하는 코딩
+                    // $p.css("display", "block"); => 이것도 가능함.
+                    $p.slideDown();
+                }else{
+                    $p.slideUp();
+                }
+                */
+                if($p.css("display") == "none"){
+                    // 기존꺼는 다 닫고 지금꺼만 열리게
+                    $(this).siblings("p").slideUp();// 기존꺼는 다 닫고
+                    $p.slideDown(); // 지금꺼만 열리게
+                    
+
+                }else{
+                    $p.slideUp();
+                }
+
+            })
+        })
+    </script>
+
+
+
+
+</body>
+</html>
